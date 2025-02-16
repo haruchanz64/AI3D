@@ -81,18 +81,18 @@ namespace AI
         private void OnDrawGizmos()
         {
             // Draw the detection range
-            Gizmos.color = Color.yellow;
+            Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, detectionRange);
 
             // Draw the field of view
-            Gizmos.color = Color.green;
+            Gizmos.color = Color.blue;
             Vector3 leftBoundary = Quaternion.Euler(0, -fieldOfViewAngle / 2, 0) * transform.forward * detectionRange;
             Vector3 rightBoundary = Quaternion.Euler(0, fieldOfViewAngle / 2, 0) * transform.forward * detectionRange;
             Gizmos.DrawLine(transform.position, transform.position + leftBoundary);
             Gizmos.DrawLine(transform.position, transform.position + rightBoundary);
 
             // Draw the line of sight (optional)
-            Gizmos.color = Color.red;
+            Gizmos.color = Color.yellow;
 
             // Check if _player is not null before drawing the line
             if (_player != null)

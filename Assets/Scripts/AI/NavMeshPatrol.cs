@@ -76,7 +76,7 @@ namespace AI
             // Draw a line to the player's position if the player is assigned
             if (player != null)
             {
-                Gizmos.color = Color.green;
+                Gizmos.color = Color.yellow;
                 Gizmos.DrawLine(transform.position, player.position);
             }
         }
